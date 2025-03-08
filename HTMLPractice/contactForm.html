@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        
+        .form-container {
+            background-color: grey;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            text-align: center;
+        }
+
+       
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label{
+            color:white;
+        }
+        input, select, textarea {
+            width: 100%; /* Ensures it does not exceed form width */
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #333;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding is included in width */
+            resize: none; /* Prevents manual resizing beyond the form */
+        }
+
+        /* Button styling */
+        button {
+            padding: 10px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: darkgray;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2 style="color:white">Contact Form</h2>
+        <form id="contactForm">
+            <label for="user">Username</label>
+            <input type="text" name="user" required>
+
+            <label for="email">User Email</label>
+            <input type="email" name="email" required>
+
+            <label for="gender">Gender</label>
+            <select name="gender" required>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea name="message" rows="7" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

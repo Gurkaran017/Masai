@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body style="margin:0; display: flex;flex-direction: column;justify-content: center;">
+    <header style="display:flex; flex-direction:column; justify-content:center; background: linear-gradient(to bottom, rgb(14, 14, 121), rgba(48, 225, 248, 0.993));color:white;padding: 10px;">
+        <h2 style="text-align: center;">My Portfolio</h2>
+        <nav style="display:flex; justify-content:center; align-items:center;list-style:none;gap: 2rem;margin-bottom: 8px;">
+            <li>Home</li>
+            <li>About</li>
+            <li>Projects</li>
+            <li>Contact</li>
+        </nav>
+    </header>
+    <div style="display: flex;justify-content: center;">
+        <div style="margin-top:30px ;max-width: 1000px;display: flex; flex-direction: column; justify-content: center;">
+            <div>
+                <h2>Welcome to My Portfolio</h2>
+                <p>The portfolio showcases my projects and provides information about my background and contact details.</p>
+            </div>
+            <div>
+                <h2>About</h2>
+                <p>Hello I am a web developer and passionate about building dynamic and responsive websites. I enjoy creating user freindly interfaces and working on challenging projects.</p>
+            </div>
+            <div>
+                <h2>Projects</h2>
+                <table style="border:1px solid rgb(239, 235, 235); border-collapse: collapse; width: 100%;">
+                    <thead>
+                        <tr style="background-color: blue; color: white;">
+                            <th style="padding: 10px; text-align: center;">Project Name</th>
+                            <th style="padding: 10px; text-align: center;">Description</th>
+                            <th style="padding: 10px; text-align: center;">Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid rgb(147, 143, 143); padding: 10px;">Project myProject</td>
+                            <td style="border: 1px solid rgb(147, 143, 143); padding: 10px;">A web-based tool for tracking project progress and managing tasks.</td>
+                            <td style="border: 1px solid rgb(147, 143, 143); padding: 10px;">2023</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid rgb(147, 143, 143); padding: 10px;">Portfolio Site</td>
+                            <td style="border: 1px solid rgb(147, 143, 143); padding: 10px;">A personal website showcasing my work and skills as a web developer.</td>
+                            <td style="border: 1px solid rgb(147, 143, 143); padding: 10px;">2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+            <div>
+                <h2>Contact</h2>
+                <form style="width: 300px;">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" 
+                           style="width: 100%; padding: 8px; border: 1px solid #ddd; 
+                                  border-radius: 5px; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);"><br><br>
+                
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" name="email"
+                           style="width: 100%; padding: 8px; border: 1px solid #ddd; 
+                                  border-radius: 5px; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);"><br><br>
+                
+                    <label for="message">Message</label><br>
+                    <textarea id="message" name="message" rows="4"
+                              style="width: 100%; padding: 8px; 
+                                     border-radius: 5px; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);"></textarea><br><br>
+                
+                    <button style="padding: 8px 15px; border: none ; 
+                                 border-radius: 5px; cursor: pointer;">
+                        Submit
+                    </button>
+                </form>
+                
+            </div>
+        </div>
+    </div><br><br>
+    <footer style="background: linear-gradient(to bottom, rgb(5, 62, 81), blue);">
+        <div style="height: 2rem;"></div>
+    </footer>
+</body>
+</html>

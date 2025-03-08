@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .gallery {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery section {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        a:hover {
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <div class="gallery">
+        <section>
+            <img src="https://static.toiimg.com/photo/110202358.cms" alt="Beautiful Landscape">
+            <a href="https://example.com/landscape" target="_blank">View More</a>
+        </section>
+
+        <section>
+            <img src="https://media.timeout.com/images/106126604/750/422/image.jpg" alt="City Skyline at Night">
+            <a href="https://example.com/city" target="_blank">Explore the City</a>
+        </section>
+
+        <section>
+            <img src="https://i.pinimg.com/736x/e0/71/2c/e0712c5199c06b892918dbe81600c1a8.jpg" alt="Space Galaxy">
+            <a href="https://example.com/space" target="_blank">Discover Space</a>
+        </section>
+    </div>
+
+</body>
+</html>
