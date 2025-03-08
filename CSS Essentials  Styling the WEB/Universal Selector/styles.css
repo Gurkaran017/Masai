@@ -1,0 +1,26 @@
+/* Universal selector to reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for h1 with id="main-title" */
+#main-title {
+    font-size: 32px;
+    color: darkblue;
+    text-align: center;
+}
+
+/* Styling for h2 with id="subtitle" */
+#subtitle {
+    font-size: 24px;
+    color: darkgreen;
+}
+
+/* Styling for paragraphs */
+p {
+    padding: 10px;
+    border: 1px solid lightgray;
+    margin: 10px;
+}
