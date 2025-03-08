@@ -1,0 +1,20 @@
+/* Style the first list item in bold */
+ol li:first-child {
+    font-weight: bold;
+}
+
+/* Apply background color to the item directly following the first item */
+ol li:first-child + li {
+    background-color: lightgray;
+}
+
+/* Style all list items following the third item in italics */
+ol li:nth-child(3) ~ li {
+    font-style: italic;
+}
+
+/* Change color when hovering over a list item */
+ol li:hover {
+    color: darkblue;
+    cursor: pointer;
+}

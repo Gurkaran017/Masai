@@ -1,0 +1,66 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base navigation styles */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: #222;
+    padding: 15px;
+}
+
+.nav-section {
+    position: relative;
+}
+
+/* Descendant combinator: Different colors for sections */
+.section-1 a {
+    color: lightblue;
+}
+
+.section-2 a {
+    color: lightgreen;
+}
+
+.section-3 a {
+    color: lightcoral;
+}
+
+/* Child combinator: Direct links styled differently */
+.nav-section > a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Hover and Active Pseudo-Classes */
+.nav-section a:hover {
+    color: yellow;
+}
+
+.nav-section a:active {
+    color: orange;
+}
+
+/* Style links starting with "https" (Highest specificity) */
+.nav-section a[href^="https"] {
+    color: red !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Submenu Styling */
+.submenu {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-section:hover .submenu {
+    display: block;
+}

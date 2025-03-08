@@ -1,0 +1,39 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centered container with flexbox */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between boxes */
+    padding: 20px;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+/* Styled boxes with proper positioning */
+.box {
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    border: 1px solid black;
+    margin: 5px;
+    position: relative; /* Changed from absolute to avoid overlap */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fixed text position */
+.text {
+    position: fixed;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+}

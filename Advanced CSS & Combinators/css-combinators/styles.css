@@ -1,0 +1,10 @@
+/* Descendant combinator: Styles all <p> elements inside <div> */
+div p {
+    color: blue;
+}
+
+/* Child combinator: Styles only the direct child <p> of <div> */
+div > p {
+    font-weight: bold;
+}
+
