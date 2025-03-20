@@ -1,0 +1,99 @@
+body, html {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo img {
+    max-width: 17rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    width: 14rem;
+    height: 19rem;
+    border-radius: .2rem;
+    margin: 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.investors {
+    width: 14rem;
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+}
+
+.card h1 {
+    font-size: medium;
+    margin: 0;
+}
+
+.card p {
+    font-size: small;
+    margin: 0;
+}
+
+.company-logo {
+    width: 5rem;
+}
+
+.main-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 1200px) {
+    .main-card {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .logo img {
+        max-width: 14rem;
+    }
+
+    .card h1 {
+        font-size: large;
+    }
+}
+
+@media (max-width: 900px) {
+    .main-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo img {
+        max-width: 12rem;
+    }
+
+    .card h1 {
+        font-size: larger;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-card {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .logo img {
+        max-width: 10rem;
+    }
+
+    .card h1 {
+        font-size: x-large;
+    }
+}
