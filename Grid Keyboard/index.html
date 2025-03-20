@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3847ae3c9c.js" crossorigin="anonymous"></script>
+    <title>Grid Keyboard</title>
+    <style>
+        #keyboard{
+            background-color: #4fb0d5;
+            padding: 50px 40px;
+            color: #419dc6;
+            height: 420px;
+        }
+        .container{
+            background-color: #282b2b;
+            width: 90%;
+            height: 80%;
+            gap: 15px;
+            padding: 38px;
+            margin: auto;
+            border-radius: 15px;
+            display: grid;
+            grid-template-areas: 
+            "tilda one two three four five six seven eight nine zeros delete"
+            "tab q w e r t ys u i o p bslace"
+            "caps a s d f g h j k l enter enter"
+            "shift z xs c v b n m lessthan greaterthan shift2 shift2"
+            "world ctrl option alt spaces spaces spaces spaces alt2 option2 lefts rights";
+        }
+        .container>div{
+            background-color: #323438;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        .tilda{
+            grid-area: tilda;
+        }
+        .one{
+            grid-area: one;
+        }
+        .two{
+            grid-area: two;
+        }
+        .three{
+            grid-area: three;
+        }
+        .four{
+            grid-area: four;
+        }
+        .five{
+            grid-area: five;
+        }
+        .six{
+            grid-area: six;
+        }
+        .seven{
+            grid-area: seven;
+        }
+        .eight{
+            grid-area: eight;
+        }
+        .nine{
+            grid-area: nine;
+        }
+        .zeros{
+            grid-area: zeros;
+        }
+        .delete{
+            grid-area: delete;
+        }
+        .tab{
+            grid-area: tab;
+        }
+        .q{
+            grid-area: q;
+        }
+        .w{
+            grid-area: w;
+        }
+        .e{
+            grid-area: e;
+        }
+        .r{
+            grid-area: r;
+        }
+        .t{
+            grid-area: t;
+        }
+        .ys{
+            grid-area: ys;
+        }
+        .u{
+            grid-area: u;
+        }
+        .i{
+            grid-area: i;
+        }
+        .o{
+            grid-area: o;
+        }
+        .p{
+            grid-area: p;
+        }
+        .bslace{
+            grid-area: bslace;
+        }
+        .caps{
+            grid-area: caps;
+        }
+        .a{
+            grid-area: a;
+        }
+        .s{
+            grid-area: s;
+        }
+        .d{
+            grid-area: d;
+        }
+        .f{
+            grid-area: f;
+        }
+        .g{
+            grid-area: g;
+        }
+        .h{
+            grid-area: h;
+        }
+        .j{
+            grid-area: j;
+        }
+        .k{
+            grid-area: k;
+        }
+        .l{
+            grid-area: l;
+        }
+        .enter{
+            grid-area: enter;
+        }
+        .shift{
+            grid-area: shift;
+        }
+        .z{
+            grid-area: z;
+        }
+        .xs{
+            grid-area: xs;
+        }
+        .c{
+            grid-area: c;
+        }
+        .v{
+            grid-area: v;
+        }
+        .b{
+            grid-area: b;
+        }
+        .n{
+            grid-area: n;
+        }
+        .m{
+            grid-area: m;
+        }
+        .lessthan{
+            grid-area: lessthan;
+        }
+        .greaterthan{
+            grid-area: greaterthan;
+        }
+        .shift2{
+            grid-area: shift2;
+        }
+        .world{
+            grid-area: world;
+        }
+        .ctrl{
+            grid-area: ctrl;
+        }
+        .option{
+            grid-area: option;
+        }
+        .alt{
+            grid-area: alt;
+        }
+        .spaces{
+            grid-area: spaces;
+        }
+        .alt2{
+            grid-area: alt2;
+        }
+        .option2{
+            grid-area: option2;
+        }
+        .lefts{
+            grid-area: lefts;
+        }
+        .rights{
+            grid-area: rights;
+        }
+    </style>
+</head>
+<body>
+    <div id="keyboard">
+        <div class="container">
+            <div class="tilda"><h3>~</h3></div>
+            <div class="one"><h3>1</h3></div>
+            <div class="two"><h3>2</h3></div>
+            <div class="three"><h3>3</h3></div>
+            <div class="four"><h3>4</h3></div>
+            <div class="five"><h3>5</h3></div>
+            <div class="six"><h3>6</h3></div>
+            <div class="seven"><h3>7</h3></div>
+            <div class="eight"><h3>8</h3></div>
+            <div class="nine"><h3>9</h3></div>
+            <div class="zeros"><h3>0</h3></div>
+            <div class="delete"><h3>del</h3></div>
+            <div class="tab"><h3>tab</h3></div>
+            <div class="q"><h3>Q</h3></div>
+            <div class="w"><h3>W</h3></div>
+            <div class="e"><h3>E</h3></div>
+            <div class="r"><h3>R</h3></div>
+            <div class="t"><h3>T</h3></div>
+            <div class="ys"><h3>Y</h3></div>
+            <div class="u"><h3>U</h3></div>
+            <div class="i"><h3>I</h3></div>
+            <div class="o"><h3>O</h3></div>
+            <div class="p"><h3>P</h3></div>
+            <div class="bslace"><h3>\</h3></div>
+            <div class="caps"><h3>caps</h3></div>
+            <div class="a"><h3>A</h3></div>
+            <div class="s"><h3>S</h3></div>
+            <div class="d"><h3>D</h3></div>
+            <div class="f"><h3>F</h3></div>
+            <div class="g"><h3>G</h3></div>
+            <div class="h"><h3>H</h3></div>
+            <div class="j"><h3>J</h3></div>
+            <div class="k"><h3>K</h3></div>
+            <div class="l"><h3>L</h3></div>
+            <div class="enter"><h3>ENTER</h3></div>
+            <div class="shift"><h3>Shift</h3></div>
+            <div class="z"><h3>Z</h3></div>
+            <div class="xs"><h3>X</h3></div>
+            <div class="c"><h3>C</h3></div>
+            <div class="v"><h3>V</h3></div>
+            <div class="b"><h3>B</h3></div>
+            <div class="n"><h3>N</h3></div>
+            <div class="m"><h3>M</h3></div>
+            <div class="lessthan"><h3><i class="fa-solid fa-less-than"></i></h3></div>
+            <div class="greaterthan"><h3><i class="fa-solid fa-greater-than"></i></h3></div>
+            <div class="shift2"><h3>Shift</h3></div>
+            <div class="world"><h3><i class="fa-solid fa-globe"></i></h3></div>
+            <div class="ctrl"><h3>ctrl</h3></div>
+            <div class="option"><h3><i class="fa-solid fa-bars"></i></h3></div>
+            <div class="alt"><h3>alt</h3></div>
+            <div class="spaces"><h3>Space</h3></div>
+            <div class="alt2"><h3>alt</h3></div>
+            <div class="option2"><h3><i class="fa-solid fa-bars"></i></h3></div>
+            <div class="lefts"><h3><i class="fa-solid fa-arrow-left"></i></h3></div>
+            <div class="rights"><h3><i class="fa-solid fa-arrow-right"></i></h3></div>
+        </div>
+    </div>
+</body>
+</html>
