@@ -1,0 +1,46 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Ensure container aligns boxes properly */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;  /* Space between boxes */
+    padding: 20px;
+    flex-wrap: wrap; /* Responsive wrapping */
+}
+
+/* Fix box spacing and layout */
+.box {
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    border: 1px solid black;
+    margin: 10px;  /* Proper margin instead of negative */
+    position: relative; /* Remove absolute positioning */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fix positioning issue for text */
+.text {
+    position: fixed;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
