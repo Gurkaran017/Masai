@@ -1,0 +1,85 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222;
+}
+
+/* Gallery Container */
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 10px;
+}
+
+/* Left Grid with Circles */
+.left-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right Grid with Rectangles */
+.right-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rectangle {
+    width: 150px;
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rectangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .left-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .right-grid {
+        width: 100%;
+        align-items: center;
+    }
+}
