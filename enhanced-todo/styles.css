@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Task list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Completed tasks */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Buttons */
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
