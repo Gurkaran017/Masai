@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Library Management System</h1>
+
+  <!-- BOOKS SECTION -->
+  <section id="books-section">
+    <h2>Books</h2>
+    <form id="book-form">
+      <input type="text" id="book-title" placeholder="Title" required />
+      <input type="text" id="book-author" placeholder="Author" required />
+      <input type="text" id="book-genre" placeholder="Genre" required />
+      <input type="number" id="book-year" placeholder="Published Year" required />
+      <select id="book-available">
+        <option value="true">Available</option>
+        <option value="false">Not Available</option>
+      </select>
+      <button type="submit">Add Book</button>
+    </form>
+
+    <div id="book-filters">
+      <input type="text" id="filter-genre" placeholder="Filter by Genre"/>
+      <input type="text" id="filter-author" placeholder="Filter by Author"/>
+      <select id="sort-books">
+        <option value="">Sort By</option>
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+        <option value="publishedYear">Published Year</option>
+      </select>
+      <select id="books-per-page">
+        <option value="5">5 per page</option>
+        <option value="10">10 per page</option>
+      </select>
+    </div>
+
+    <div id="book-list"></div>
+    <div id="book-pagination"></div>
+  </section>
+
+  <script src="firebase-config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

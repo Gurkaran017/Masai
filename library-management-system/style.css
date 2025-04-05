@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+  }
+  
+  form {
+    margin-bottom: 15px;
+  }
+  
+  input, select, button {
+    margin: 5px;
+    padding: 8px;
+  }
+  
+  #book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .book-card {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 200px;
+    border-radius: 5px;
+  }
+  
