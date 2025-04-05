@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .todo {
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 500px;
+    border-radius: 8px;
+    background: #f4f4f4;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #pagination {
+    margin-top: 20px;
+  }
+  
+  #pagination button {
+    margin: 2px;
+    padding: 6px 10px;
+    border: 1px solid #888;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  #pagination button.active {
+    background-color: #333;
+    color: white;
+  }
+  
