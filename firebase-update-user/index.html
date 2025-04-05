@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Update Firebase User</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>User List</h1>
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- User rows go here -->
+      </tbody>
+    </table>
+
+    <div id="editSection" class="hidden">
+      <h2>Edit User</h2>
+      <form id="editForm">
+        <input type="text" id="editName" required />
+        <input type="email" id="editEmail" required />
+        <button type="submit">Update</button>
+      </form>
+    </div>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
