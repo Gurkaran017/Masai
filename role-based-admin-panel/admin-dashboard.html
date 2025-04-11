@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="firebase-config.js"></script>
+</head>
+<body>
+  <h2>Admin Dashboard</h2>
+  <button onclick="logout()">Logout</button>
+
+  <h3>Add Product</h3>
+  <input id="title" placeholder="Title"><br>
+  <input id="price" placeholder="Price" type="number"><br>
+  <input id="image" placeholder="Image URL"><br>
+  <button onclick="addProduct()">Add Product</button>
+
+  <h3>Product List</h3>
+  <div id="productList"></div>
+
+  <script>
+    if (localStorage.getItem("role") !== "admin") {
+      window.location.href = "user-dashboard.html";
+    }
+
+    function logout() {
+      auth.signOut().then(() => {
+        localStorage.clear();
+        window.location.href = "login.html";
+      });
+    }
+
+    function addProduct() {
+      const title = document.getElementById("title").value;
+      const price = document.getElementById("price").value;
+      const image = document.getElementById("image").value;
+
+      db.ref('products').push({ title, price, image });
+    }
+
+    function loadProducts() {
+      db.ref('products').on('value', snapshot => {
+        const container = document.getElementById("productList");
+        container.innerHTML = '';
+        snapshot.forEach(child => {
+          const p = child.val(), id = child.key;
+          container.innerHTML += `
+            <div>
+              <h4>${p.title}</h4>
+              <img src="${p.image}" width="100"><br>
+              <p>$${p.price}</p>
+              <input value="${p.title}" id="title-${id}"><br>
+              <input value="${p.price}" type="number" id="price-${id}"><br>
+              <input value="${p.image}" id="image-${id}"><br>
+              <button onclick="updateProduct('${id}')">Update</button>
+              <button onclick="deleteProduct('${id}')">Delete</button>
+              <hr>
+            </div>`;
+        });
+      });
+    }
+
+    function updateProduct(id) {
+      db.ref('products/' + id).update({
+        title: document.getElementById("title-" + id).value,
+        price: document.getElementById("price-" + id).value,
+        image: document.getElementById("image-" + id).value,
+      });
+    }
+
+    function deleteProduct(id) {
+      db.ref('products/' + id).remove();
+    }
+
+    loadProducts();
+  </script>
+</body>
+</html>

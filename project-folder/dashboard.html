@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+  <h2>Dashboard</h2>
+  <button onclick="logout()">Logout</button>
+  <div id="products"></div>
+
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      localStorage.removeItem("userId");
+      window.location.href = "login.html";
+    }
+
+    fetch("https://fakestoreapi.com/products")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("products");
+        data.forEach(product => {
+          const div = document.createElement("div");
+          div.innerHTML = `
+            <h3>${product.title}</h3>
+            <img src="${product.image}" width="100"/><br>
+            <p>$${product.price}</p>
+            <hr>
+          `;
+          container.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>

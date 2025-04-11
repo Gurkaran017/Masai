@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Dashboard</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="firebase-config.js"></script>
+</head>
+<body>
+  <h2>User Dashboard</h2>
+  <button onclick="logout()">Logout</button>
+  <div id="productList"></div>
+
+  <script>
+    if (localStorage.getItem("role") !== "user") {
+      window.location.href = "admin-dashboard.html";
+    }
+
+    function logout() {
+      auth.signOut().then(() => {
+        localStorage.clear();
+        window.location.href = "login.html";
+      });
+    }
+
+    function loadProducts() {
+      db.ref('products').on('value', snapshot => {
+        const container = document.getElementById("productList");
+        container.innerHTML = '';
+        snapshot.forEach(child => {
+          const p = child.val();
+          container.innerHTML += `
+            <div>
+              <h4>${p.title}</h4>
+              <img src="${p.image}" width="100"><br>
+              <p>$${p.price}</p>
+              <hr>
+            </div>`;
+        });
+      });
+    }
+
+    loadProducts();
+  </script>
+</body>
+</html>
