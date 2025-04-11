@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .pagination {
+    margin: 20px;
+  }
+  
+  .detail-container {
+    padding: 20px;
+  }
+  
+  footer {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
