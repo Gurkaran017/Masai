@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #eee;
+}
+
+.status-card {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: #ddd;
+  cursor: pointer;
+  position: relative;
+}
