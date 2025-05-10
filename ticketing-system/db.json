@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Login Issue",
+    "description": "Unable to login",
+    "priority": "high",
+    "user": "John Doe",
+    "status": "pending"
+  },
+  {
+    "id": 2,
+    "title": "Bug Report",
+    "description": "App crashes on open",
+    "priority": "medium",
+    "user": "Jane Doe",
+    "status": "pending"
+  }
+]
